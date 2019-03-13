@@ -5,12 +5,14 @@ include "iostream"
 	include "cmath"
 #endif
 
-int main()
+int main(int argc, char *argv[])
 {
+	double degree = atof(argv[1]);
+
 	#ifdef USE_TRIGONOMETRY_DEGREE
-		std::cout << degreemath::sin(45);
+		std::cout << degreemath::sin(degree);
 	#else
-		std::cout << std::sin(45);
+		std::cout << std::sin(degree);
 	#endif
 	return 0;
 }
